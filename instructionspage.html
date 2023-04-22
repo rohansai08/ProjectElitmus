@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+	<title>Welcome to the Puzzle</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: black;
+			font-family: Arial, sans-serif;
+			color: white;
+		}
+
+		.container {
+			text-align: center;
+			margin-top: 100px;
+		}
+
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			margin-bottom: 50px;
+		}
+
+		#instruction {
+			font-size: 24px;
+			margin-bottom: 50px;
+			text-align: left;
+			margin-left: 50px;
+			line-height: 1.5;
+		}
+
+		button {
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to the SoftSkills Puzzle</h1>
+		<p id="instruction">Instructions: 
+            <ul>
+        <li>The puzzle starts at the beginning, and you'll receive clues as you progress. Follow each clue carefully, but watch out for dead-ends!
+         Your progress will be saved, so take your time and do your best.</li>
+        <li> start the puzzle, begin at the first clue. Follow each clue to the next, but be careful not to get stuck in a dead-end! Your progress will be tracked, so take your time and do your best.</li>
+        <li> At the beginning of the puzzle, you'll be given a clue. Follow each clue to the next, but beware of dead-ends! Your progress will be recorded, so take your time and do your best.</li>
+      </ul>
+        </p>
+		<button id="startButton">Start Puzzle</button>
+	</div>
+	<script>
+	    const startButton = document.getElementById("startButton");
+	    startButton.addEventListener("click", function() {
+	      window.location.href = "clueno1.html";
+	    });
+	</script>
+</body>
+</html>

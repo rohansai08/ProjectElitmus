@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>An Interactive Puzzle Game</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: Arial, sans-serif;
+    }
+    
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    iframe {
+      border: none;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+    
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    label {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: white;
+      color: black;
+    }
+    
+    button {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #3e8e41;
+    }
+    .hint {
+  position: fixed;
+  top: 7cm;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+  </style>
+</head>
+<body>
+  <p>Answer the word you can observe:</p>
+  <div class="center">
+    <img width="560" height="315" src="https://pe-images.s3.amazonaws.com/type/effects/ghostly-blur/photoshop-ghostly-blur-text.jpg" allowfullscreen></img>
+    <br><br>
+    <label for="answer">Enter answer:</label>
+    <input type="text" id="answer" name="answer"><br><br>
+    <button onclick="checkAnswer()">Submit</button>
+    <div class="hint">
+        <label>Hint:</label>
+        <p><a href="https://w7.pngwing.com/pngs/798/198/png-transparent-xara-television-london-blur-round-miscellaneous-building-monochrome-thumbnail.png" target="_blank">Click here for a hint</a></p>
+      </div>
+      
+  </div>
+
+  <script>
+    function checkAnswer() {
+      var answer = document.getElementById("answer").value;
+      if (answer.toUpperCase() == "BLUR") {
+        window.location.href = "clueno3.html";
+      } else {
+        alert("Wrong answer, try again.");
+      }
+    }
+  </script>
+</body>
+</html>
